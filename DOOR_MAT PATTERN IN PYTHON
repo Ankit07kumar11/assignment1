@@ -1,0 +1,21 @@
+# to take input for no. of rows and columns
+rows,columns=map(int,input().split())
+# to find the middle of rows
+middle=(rows//2)+1
+
+# to print the top of the pattern , pattern above the welcome line
+for i in range(1,middle):
+    center=((i*2)-1)*'.|.'
+#to print the pattern at centre and cover them by '-'
+    print(center.center(columns,'-'))
+
+
+#to print the middle line
+print("WELCOME".center(columns,'-'))
+
+#to print the bottom pattern , below the WELCOME line , just reverse the range of the upper for loop
+#upper paatern is similar to lower pattern
+
+for i in reversed(range(1,middle)):
+    center=((i*2)-1)*'.|.'
+    print(center.center(columns,'-'))
